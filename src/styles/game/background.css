@@ -1,0 +1,109 @@
+
+
+@keyframes animate {
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+}
+
+.background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background: #4e54c8;
+    overflow: hidden;
+}
+.background li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 19s linear infinite;
+}
+
+
+
+
+.background li:nth-child(0) {
+    left: 70%;
+    width: 132px;
+    height: 132px;
+    bottom: -132px;
+    animation-delay: 1s;
+}
+.background li:nth-child(1) {
+    left: 52%;
+    width: 111px;
+    height: 111px;
+    bottom: -111px;
+    animation-delay: 2s;
+}
+.background li:nth-child(2) {
+    left: 29%;
+    width: 199px;
+    height: 199px;
+    bottom: -199px;
+    animation-delay: 9s;
+}
+.background li:nth-child(3) {
+    left: 8%;
+    width: 136px;
+    height: 136px;
+    bottom: -136px;
+    animation-delay: 4s;
+}
+.background li:nth-child(4) {
+    left: 28%;
+    width: 188px;
+    height: 188px;
+    bottom: -188px;
+    animation-delay: 1s;
+}
+.background li:nth-child(5) {
+    left: 22%;
+    width: 110px;
+    height: 110px;
+    bottom: -110px;
+    animation-delay: 2s;
+}
+.background li:nth-child(6) {
+    left: 77%;
+    width: 161px;
+    height: 161px;
+    bottom: -161px;
+    animation-delay: 28s;
+}
+.background li:nth-child(7) {
+    left: 15%;
+    width: 118px;
+    height: 118px;
+    bottom: -118px;
+    animation-delay: 25s;
+}
+.background li:nth-child(8) {
+    left: 67%;
+    width: 153px;
+    height: 153px;
+    bottom: -153px;
+    animation-delay: 32s;
+}
+.background li:nth-child(9) {
+    left: 61%;
+    width: 143px;
+    height: 143px;
+    bottom: -143px;
+    animation-delay: 3s;
+}

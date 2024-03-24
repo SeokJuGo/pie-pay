@@ -1,0 +1,263 @@
+.card-body {
+  width: 100%;
+
+  height: 100%;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.result{
+  z-index: 10;
+  position:absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  top:8%;
+  right:0;
+  bottom:0;
+  left:0;
+}
+
+ul.cards-stack {
+  width: 100%;
+  height: 20%;
+  list-style-type: none;
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  right: 5%;
+}
+ul.cards-stack li.card {
+
+  color: #fff;
+  overflow: hidden;
+  height: 100%;
+  width: 40%;
+  border-radius: 10px;
+  position: absolute;
+  box-shadow: 1px 2px 2px 0 #aaa;
+  transition: all 0.4s cubic-bezier(0.63, 0.15, 0.03, 1.12);
+  &:hover {
+    top: -20px; /* 호버시 위로 올라가도록 변경 */
+  }
+}
+
+li.front{
+  visibility: hidden;
+}
+
+li.card > p{
+  padding:10px;
+  font-size:40px
+}
+li.card{
+  padding:10px
+}
+
+li.card > div{
+  display: flex;
+  justify-content: space-between;
+}
+ul.cards-stack li.card.selectedback {
+  z-index: 100;
+  transform: rotate3d(1, 1, 0, 90deg) scale(1.5) translate(-70%, -100%);
+  position: absolute;
+  top: 80%;
+  left: 85%;
+  transition: all 0.6s ease;
+  z-index: -1;
+  display:flex;
+}
+ul.cards-stack li.card.selectedfront {
+  z-index: 100;
+  transform: rotate3d(1, 1, 0, 40deg) scale(1.5) translate(-70%, -100%);
+  position: absolute;
+  top: 90%;
+  left: 75%;
+  transition: all 0.6s ease;
+}
+ul.cards-stack.stacked li.card {
+  left: 40%;
+}
+
+
+.card-1 {
+  z-index: 10;
+  transform: rotateZ(0deg);
+  background-color: #f6eb4b;
+}
+
+.card-2 {
+  z-index: 9;
+  transform: rotateZ(-5deg);
+  transition-delay: 0.05s;
+  background-color: #6d4f40;
+}
+
+.card-3 {
+  z-index: 8;
+  transform: rotateZ(5deg);
+  transition-delay: 0.1s;
+  background-color: #e9015b;
+}
+
+
+.card-4 {
+  z-index: 7;
+  transform: rotateZ(-10deg);
+  background-color: #03b24f;
+}
+
+.card-5 {
+  z-index: 6;
+  transform: rotateZ(10deg);
+  transition-delay: 0.05s;
+  background-color: #5232b9;
+}
+
+.card-6 {
+  z-index: 5;
+  transform: rotateZ(-15deg);
+  transition-delay: 0.1s;
+  background-color: #c3da37;
+}
+
+.card-7 {
+  z-index: 4;
+  transform: rotateZ(15deg);
+  transition-delay: 0.1s;
+  background-color: #0b8eea;
+}
+
+.card-8 {
+  z-index: 3;
+  transform: rotateZ(-20deg);
+  transition-delay: 0.1s;
+  background-color: #f6a800;
+}
+
+.card-9 {
+  z-index: 2;
+  transform: rotateZ(20deg);
+  transition-delay: 0.1s;
+  background-color: #b400b8;
+}
+
+ul.cards-stack.opened .card-1 {
+  top: 5%;
+  left: 5%;
+  z-index: 3;
+  transform: rotateZ(-15deg);
+  background-color: #f6eb4b;
+}
+
+ul.cards-stack.opened .card-2 {
+  top: 5%;
+  left: 15%;
+  z-index: 2;
+  transform: rotateZ(7deg);
+  transition-delay: 0.05s;
+  background-color: #6d4f40;
+}
+
+ul.cards-stack.opened .card-3 {
+  top: 6%;
+  left: 23%;
+  z-index: 3;
+  transform: rotateZ(20deg);
+  transition-delay: 0.1s;
+  background-color: #e9015b;
+}
+
+ul.cards-stack.opened .card-4 {
+  top: 6%;
+  left: 32%;
+  z-index: 4;
+  transform: rotateZ(-7deg);
+  background-color: #03b24f;
+}
+
+ul.cards-stack.opened .card-5 {
+  top: 5%;
+  left: 43%;
+  z-index: 5;
+  transform: rotateZ(-15deg);
+  transition-delay: 0.05s;
+  background-color: #5232b9;
+}
+
+ul.cards-stack.opened .card-6 {
+  top: 6%;
+  left: 53%;
+  z-index: 4;
+  transform: rotateZ(7deg);
+  transition-delay: 0.1s;
+  background-color: #c3da37;
+}
+
+ul.cards-stack.opened .card-7 {
+  top: 3%;
+  left: 60%;
+  z-index: 3;
+  transform: rotateZ(-7deg);
+  transition-delay: 0.1s;
+  background-color: #0b8eea;
+}
+
+ul.cards-stack.opened .card-8 {
+  top: 6%;
+  left: 69%;
+  z-index: 2;
+  transform: rotateZ(16deg);
+  transition-delay: 0.1s;
+  background-color: #f6a800;
+}
+
+ul.cards-stack.opened .card-9 {
+  top: 7%;
+  left: 78%;
+  z-index: 4;
+  transform: rotateZ(8deg);
+  
+  background-color: #b400b8;
+}
+
+
+.strip {
+  position: absolute;
+  background-color: black;
+  width: 15em;
+  height: 1.5em;
+  top: 2.4em;
+  background: repeating-linear-gradient(
+          45deg,
+          #303030,
+          #303030 10px,
+          #202020 10px,
+          #202020 20px
+  );
+}
+
+.mstrip {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 8em;
+  height: 0.8em;
+  top: 5em;
+  left: .8em;
+  border-radius: 2.5px;
+}
+
+.sstrip {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  width: 4.1em;
+  height: 0.8em;
+  top: 5em;
+  left: 10em;
+  border-radius: 2.5px;
+}
